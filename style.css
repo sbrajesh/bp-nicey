@@ -12,7 +12,7 @@ Template: bp-default
 /* Import Bp default Style */
 @import url(../../plugins/buddypress/bp-themes/bp-default/_inc/css/default.css );
 /* Default theme admin bar style for bp nicey */
-@import url( _inc/css/adminbar.css );
+@import url( _inc/css/nicey-adminbar.css );
 
 /* Default theme styles */
 @import url( _inc/css/screen.css );

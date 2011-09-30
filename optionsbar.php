@@ -10,10 +10,10 @@
 
 	<ul id="options-nav"<?php bpm_classic_has_icons() ?>>
 				<?php 
-                    if(bp_is_home()){
+                    if(bp_is_my_profile()){
                         bp_get_options_nav();
                      }
-                  else if(bp_is_member ())
+                  else if(bp_is_user ())
                       bp_get_displayed_user_nav ();
                   else
                       bp_get_options_nav ();

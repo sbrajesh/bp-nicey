@@ -33,18 +33,18 @@ function bpm_classic_close_div(){
 function bpm_classic_get_options_class() {
 	global $bp;
 
-	if ( ( !bp_is_home() && $bp->current_component == $bp->profile->slug ) || ( !bp_is_home() && $bp->current_component == $bp->friends->slug ) || ( !bp_is_home() && $bp->current_component == $bp->blogs->slug ) ) {
+	if ( ( !bp_is_my_profile() && bp_is_current_component($bp->profile->slug) ) || ( !bp_is_my_profile() && bp_is_current_component($bp->friends->slug )) || ( !bp_is_my_profile() &&bp_is_current_component( $bp->blogs->slug ) )) {
 		echo ' class="arrow"';
 	}
 
-	if ( ( $bp->current_component == $bp->groups->slug && $bp->is_single_item ) || ( $bp->current_component == $bp->groups->slug && !bp_is_home() ) )
+	if ( ( bp_is_current_component( $bp->groups->slug)&& $bp->is_single_item ) || ( bp_is_current_component( $bp->groups->slug) && !bp_is_my_profile() ) )
 		echo ' class="arrow"';
 }
 
 function bpm_classic_has_icons() {
 	global $bp;
 
-	if ( ( !bp_is_home() ) )
+	if ( ( !bp_is_my_profile() ) )
 		echo ' class="icons"';
 }
 function bpm_classic_login_bar() {
@@ -99,10 +99,17 @@ if(bp_is_directory ()||  bp_is_blog_page()||bp_is_page(BP_REGISTER_SLUG)||  bp_i
 return $classes;
 else
     $classes[]="column-component";
-if(bp_is_home ())
+if(bp_is_my_profile ())
     $classes[]="self-profile-view";
 return $classes;
 
 
+}
+
+//logout link
+
+function bpnicey_logout_link(){
+    $logout_link = '<a href="' . wp_logout_url( bp_get_root_domain() ) . '">' . __( 'Log Out', 'buddypress' ) . '</a>';
+	echo apply_filters( 'bp_logout_link', $logout_link );
 }
 ?>

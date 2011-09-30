@@ -63,7 +63,7 @@
 			<?php else : ?>
 		
 				<div id="logout-link">
-					<?php bp_loggedin_user_avatar( 'width=20&height=20' ) ?> &nbsp; <?php bp_loggedin_user_link() ?> / <?php bpnicey_logout_link() ?>
+					<?php bp_loggedin_user_avatar( 'width=20&height=20' ) ?> &nbsp; <?php echo bp_core_get_userlink(bp_loggedin_user_id()) ?> / <?php bpnicey_logout_link() ?>
 					
 					<?php do_action( 'bp_login_bar_logged_in' ) ?>
 				</div>

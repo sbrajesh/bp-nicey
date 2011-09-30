@@ -323,7 +323,7 @@ a.button, input[type="submit"], input[type="button"], ul.button-nav li a, div.ge
 a.button:hover, a.button:focus, input[type=submit]:hover, input[type=button]:hover,
 ul.button-nav li a:hover, ul.button-nav li.current a,
 div.generic-button a:hover {
-	color: #E4F3FF;
+	color: #154E75;
 	outline: none;
 }
 

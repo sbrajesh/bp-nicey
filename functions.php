@@ -11,6 +11,7 @@ add_action("bp_before_group_home_content","bpm_classic_main_div",20);//insise co
 add_action("bp_before_group_plugin_template","bpm_classic_main_div",20);//insise contents section
 add_action("bp_before_member_home_content","bpm_classic_main_div",20);//insise contents section
 add_action("bp_before_member_plugin_template","bpm_classic_main_div",20);//insise contents section
+add_action("bp_before_member_settings_template","bpm_classic_main_div",20);//insise contents section
 function bpm_classic_main_div(){
   //if(!function_exists("bp_is_active"))
    //     return;
@@ -22,6 +23,7 @@ function bpm_classic_main_div(){
         echo "<div id=\"main\">";
         //add_action("bpmag_after_container","bpm_classic_close_div");
         add_action("bp_after_member_home_content","bpm_classic_close_div");
+        add_action("bp_after_member_settings_template","bpm_classic_close_div");
 }
 
 //close the #main div

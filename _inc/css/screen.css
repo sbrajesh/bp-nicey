@@ -48,7 +48,7 @@ div.item-list-tabs{color:#fff;}
 div#item-header h2 a{color:#215B86;font-size:30px;}
 div#item-header h2{margin-top:10px }
 div#item-header img.avatar {margin-right:30px;}
-ul#nav li.selected a, ul#nav li.current_page_item a {
+ul.nav li.selected a, ul.nav li.current_page_item a {
 	background:none;
 	color:#555555;
 }
@@ -160,7 +160,7 @@ div#subnav.item-list-tabs  {
                 right:0;
 		}
 
-	#menu ul#nav {
+	#menu ul.nav {
 		float: left;
 		margin: 10px 20px 10px 0;
 		position:relative;
@@ -180,7 +180,7 @@ div#subnav.item-list-tabs  {
 	
 #menu ul li a:hover{color: #1F5984;}
 			
-#menu ul li.selected a {				
+#menu ul#nav li.current-menu-item a {				
 	color: #1F5984;
 	font-weight: bold;
 }
@@ -1799,7 +1799,12 @@ input.settings-input {
 					li a#request-membership {
 						background: url(../images/request_bullet.gif) 87% 25% no-repeat;
 					}
-
+                                       #bp-nav  li a span:before,#optionsbar li a span:before {
+                                           content: attr(title) "( ";
+                                        }
+                                       #bp-nav li a span:after, #optionsbar li a span:after {
+                                           content: attr(title) " )";
+                                        }
 /**************************
  OPTIONS BAR
 ***************************/

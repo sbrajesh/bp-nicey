@@ -97,7 +97,7 @@ function bpm_classic_login_bar() {
 //add filter on body_class to maintain the width on the pages where vertical nav is present
 add_filter("body_class","bpmag_get_body_class",20);
 function bpmag_get_body_class($classes){
-if(bp_is_directory ()||  bp_is_blog_page()||bp_is_page(BP_REGISTER_SLUG)||  bp_is_page(BP_ACTIVATION_SLUG))
+if(bp_is_directory ()||  bp_is_blog_page()||bp_is_register_page()|| bp_is_activation_page())
 return $classes;
 else
     $classes[]="column-component";
